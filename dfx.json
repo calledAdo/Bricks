@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "Bricks_backend": {
+      "main": "src/Bricks_backend/main.mo",
+      "type": "motoko"
+    },
+    "Bricks_frontend": {
+      "dependencies": [
+        "Bricks_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/Bricks_frontend/src/index.html"
+      },
+      "source": [
+        "src/Bricks_frontend/assets",
+        "dist/Bricks_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
